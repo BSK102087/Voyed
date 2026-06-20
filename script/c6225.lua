@@ -41,7 +41,7 @@ function s.ritualfil(c)
 	return c:IsType(TYPE_PENDULUM) and c:IsType(TYPE_RITUAL)
 end
 function s.mfilter(c)
-	return c:GetLevel()>0 and c:IsType(TYPE_FLIP) and c:IsAbleToGrave()
+	return c:GetLevel()>0 and c:ListsCode(6200) and c:IsAbleToGrave()
 end
 function s.vfilter(c)
 	return c:IsCode(6200) and c:IsFaceup()
