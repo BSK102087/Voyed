@@ -119,7 +119,7 @@ if chk==0 then return Duel.IsExistingMatchingCard(s.costfilter,tp,LOCATION_EXTRA
 	Duel.SendtoGrave(g,REASON_COST)
 end
 function s.tefilter(c)
-	return c:IsType(TYPE_PENDULUM) and c:ListsCode(6200) and not c:IsForbidden()
+	return c:IsType(TYPE_PENDULUM) and c:ListsCode(6200) and (c:IsLocation(LOCATION_DECK) or c:IsFaceup()) and not c:IsForbidden()
 end
 function s.pttg(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return Duel.IsExistingMatchingCard(s.tefilter,tp,LOCATION_DECK,0,1,nil) end
