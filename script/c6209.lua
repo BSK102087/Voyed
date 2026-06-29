@@ -128,9 +128,6 @@ end
 function s.vfilter(c)
 	return c:IsCode(6200)
 end
-function s.filter1(c,tp)
-	return 
-end
 function s.desop(e,tp,eg,ep,ev,re,r,rp)
 	local c=e:GetHandler()
 	if Duel.IsExistingMatchingCard(s.vfilter,tp,LOCATION_ONFIELD,0,1,nil) and Duel.SelectEffectYesNo(tp,c,aux.Stringid(id,1)) then
